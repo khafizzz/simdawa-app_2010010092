@@ -27,6 +27,9 @@
                                          <a class="nav-link" href="<?php echo base_url('persyaratan') ?>">Persyaratan</span></a>
                                      </li>
                                      <li class="nav-item">
+                                         <a class="nav-link" href="<?php echo base_url('prodi') ?>">Prodi</span></a>
+                                     </li>
+                                     <li class="nav-item">
                                          <a class="nav-link" href="<?php echo base_url('pendaftaraan') ?>">Pendaftaraan Akun</span></a>
                                      </li>
                                      <li class="nav-item">
