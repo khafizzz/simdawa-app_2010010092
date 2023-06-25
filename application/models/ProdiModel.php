@@ -16,6 +16,13 @@ class ProdiModel extends CI_Model
         ];
 
         $this->db->insert($this->tabel, $data);
+        if ($this->db->affected_rows() > 0) {
+            $this->session->set_flashdata('pesan', 'Data Prodi berhasil ditambahkan!');
+            $this->session->set_flashdata('status', true);
+        } else {
+            $this->session->set_flashdata('pesan', 'Data Prodi gagal ditambahkan!');
+            $this->session->set_flashdata('status', false);
+        }
     }
 
     public function get_prodi_byid($id)

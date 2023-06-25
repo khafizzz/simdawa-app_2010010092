@@ -15,7 +15,7 @@ $pdf->SetFont("Arial", "B", 11);
 $pdf->SetFillColor(0, 255, 0);
 $pdf->Cell(1, 1, "No", 1, 0, "C", true);
 $pdf->Cell(6, 1, "Nama Beasiswa", 1, 0, "C", true);
-$pdf->Cell(4, 1, "Tanggal Mulai", 1, 0, "C", true);
+$pdf->Cell(4, 1, "Tanggal Mulai", 1, 1, "C", true);
 $pdf->Cell(4, 1, "Tanggal Selesai", 1, 0, "C", true);
 $pdf->Cell(4, 1, "Jenis Beasiswa", 1, 1, "C", true);
 $pdf->SetFont("Arial", "", 11);
