@@ -20,21 +20,25 @@
                                      <li class="nav-item">
                                          <a class="nav-link" href="<?php echo base_url('beasiswa') ?>">Beasiswa</span></a>
                                      </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="<?php echo base_url('jenis') ?>">Jenis Beasiswa</span></a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="<?php echo base_url('persyaratan') ?>">Persyaratan</span></a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="<?php echo base_url('prodi') ?>">Prodi</span></a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="<?php echo base_url('pendaftaraan') ?>">Pendaftaraan Akun</span></a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="<?php echo base_url('pengguna') ?>">Pengguna</span></a>
-                                     </li>
+                                     <?php if ($this->session->userdata('peran') != 'USER') : ?>
+                                         <li class="nav-item">
+                                             <a class="nav-link" href="<?php echo base_url('jenis') ?>">Jenis Beasiswa</span></a>
+                                         </li>
+                                         <li class="nav-item">
+                                             <a class="nav-link" href="<?php echo base_url('persyaratan') ?>">Persyaratan</span></a>
+                                         </li>
+                                         <li class="nav-item">
+                                             <a class="nav-link" href="<?php echo base_url('prodi') ?>">Prodi</span></a>
+                                         </li>
+                                         <li class="nav-item">
+                                             <a class="nav-link" href="<?php echo base_url('pendaftaraan') ?>">Pendaftaraan Akun</span></a>
+                                         </li>
+                                     <?php endif; ?>
+                                     <?php if ($this->session->userdata('peran') != 'ADMIN') : ?>
+                                         <li class="nav-item">
+                                             <a class="nav-link" href="<?php echo base_url('pengguna') ?>">Pengguna</span></a>
+                                         </li>
+                                     <?php endif; ?>
                                  </ul>
                              </div>
                          </li>
